@@ -1,16 +1,20 @@
 package com.company;
 
+import auxiliar_database.UsuarioDAO;
+import model.Usuario;
+import utilities.Constants;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        Cliente cliente = new Cliente("Pedro");
-        Produto produto = new Produto(0,4,"Coxinha");
-        Compra compra = new Compra(1,cliente,produto);
-
-        System.out.println(compra.pegarDetalhes());
-
-        Compra compra2 = new Compra(1,cliente,produto);
+        Aplicacao app = new Aplicacao();
+        app.run();
 
     }
 }
